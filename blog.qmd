@@ -1,1 +1,14 @@
+---
+title: "Blogg"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, author, categories, description]
+page-layout: full
+---
 
+Här hittar du alla mina blogginlägg. Använd filtren och kategorier för att hitta det du söker!
