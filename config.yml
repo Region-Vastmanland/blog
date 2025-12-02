@@ -3,12 +3,7 @@ description: "Officiell blogg för Region Västmanland"
 url: "https://region-vastmanland.github.io"
 baseurl: "/blog"
 show_posts: true
-
-remote_theme: "mmistakes/minimal-mistakes"
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-include-cache
+theme: jekyll-theme-minimal
 
 paginate: 6
 paginate_path: "/page:num/"
