@@ -10,6 +10,22 @@ layout: default
             <span>✍️ {{ page.author }}</span>
             {% endif %}
         </div>
+        {% if page.categories.size > 0 %}
+        <div class="post-categories">
+            <span>📁 Kategorier: </span>
+            {% for category in page.categories %}
+            <a href="{{ site.baseurl }}/categories.html#{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% if page.tags.size > 0 %}
+        <div class="post-tags">
+            <span>🏷️ Taggar: </span>
+            {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tags.html#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+        </div>
+        {% endif %}
     </header>
 
     <div class="post-content">
@@ -39,12 +55,33 @@ layout: default
     .post-meta {
         color: #7f8c8d;
         font-size: 0.9rem;
-        margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid #ecf0f1;
+        margin-bottom: 1rem;
         display: flex;
         gap: 1.5rem;
         flex-wrap: wrap;
+    }
+
+    .post-categories, .post-tags {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .post-categories a, .post-tags a {
+        color: #3498db;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .post-categories a:hover, .post-tags a:hover {
+        color: #2980b9;
+        text-decoration: underline;
+    }
+
+    .post-header {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #ecf0f1;
+        margin-bottom: 2rem;
     }
 
     .post-content {
