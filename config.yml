@@ -33,3 +33,20 @@ paginate_path: "/page:num/"
 # Minimal Mistakes inställningar
 minimal_mistakes_skin: "default" # alternativ: "air", "contrast", "neon", "dark"
 excerpt_separator: "<!--more-->"
+
+# Sidebar-inställningar
+# Välj vad som ska visas i sidopanelen
+show_sidebar: true
+
+sidebar:
+  - title: "Senaste inlägg"
+    links:
+      - title: "Senaste inlägg"
+        url: /blog/
+        description: "Se de senaste blogginläggen"
+
+# Om du vill visa kategorier
+show_categories: true
+
+# Om du vill visa taggar
+show_tags: true
