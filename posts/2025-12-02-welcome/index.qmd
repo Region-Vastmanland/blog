@@ -1,1 +1,19 @@
+---
+title: "Min Blogg"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  categories: true
+  max-items: 6
+  fields: [date, title, author, categories, description, image]
+page-layout: full
+---
 
+## Välkommen! 👋
+
+Hej och välkommen till min blogg! Här delar jag med mig av mina tankar, lärdomar och upptäckter inom programmering, data science och teknik.
+
+### Senaste inläggen
+
+<!-- Quarto visar automatiskt de 6 senaste inläggen här -->
