@@ -2,7 +2,9 @@
 layout: post
 title: "Välkommen till min blogg"
 date: 2024-12-02 14:30:00 +0100
-author: Ditt Namn
+author: Magnus F
+categories:  [allmänt]
+tags: [statistik, regional-utveckling]
 ---
 
 Hej och välkommen till min nya blogg! Det här är mitt första inlägg och jag är väldigt glad över att äntligen ha fått igång detta.
