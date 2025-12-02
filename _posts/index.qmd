@@ -1,0 +1,32 @@
+---
+title: "Min Blogg"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  max-items: 3
+  fields: [date, title, description]
+---
+
+## Välkommen till min blogg! 👋
+
+Här skriver jag om programmering, data science och andra tekniska ämnen som intresserar mig.
+
+### 📝 Senaste inläggen
+
+<!-- Automatisk lista med de 3 senaste -->
+
+[Se alla inlägg →](blog.qmd){.btn .btn-primary}
+
+---
+
+## 🎯 Vad jag skriver om
+
+- **Programmering**: Python, JavaScript, webbutveckling
+- **Data Science**: Analys, visualisering, machine learning
+- **Verktyg & Tips**: Produktivitet och arbetsflöden
+- **Reflektioner**: Tankar om teknik och lärande
+
+## 📬 Följ bloggen
+
+Nya inlägg publiceras varje vecka. Håll utkik efter uppdateringar!
