@@ -8,4 +8,4 @@ tags: [introduktion]
 Hej och välkommen!  
 
 Detta är vårt första blogginlägg på Region Västmanlands blogg.  
-Nu fungerar bloggflödet på startsidan och rubriken blir klickbar.
+Nu visas rubriken som en klickbar länk på startsidan och i sidebar.
