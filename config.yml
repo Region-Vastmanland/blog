@@ -1,52 +1,18 @@
 title: "Region Västmanland Blogg"
 description: "Officiell blogg för Region Västmanland"
 url: "https://region-vastmanland.github.io"
-baseurl: "/blog"  # eftersom repo heter 'blog'
+baseurl: "/blog"
 
-theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes"
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-include-cache
 
-markdown: kramdown
-
-# Navigation (valfritt)
-navigation:
-  - title: "Start"
-    url: /
-  - title: "Om"
-    url: /om/
-
-# Författare — syns i post-header
-author:
-  name: "Region Västmanland"
-  avatar: "/assets/images/logo.png"   # valfritt
-  bio: "En blogg om utveckling, analys och regionens arbete."
-
-# Bloginställningar
 paginate: 6
 paginate_path: "/page:num/"
 
-# Minimal Mistakes inställningar
-minimal_mistakes_skin: "default" # alternativ: "air", "contrast", "neon", "dark"
-excerpt_separator: "<!--more-->"
-
 # Sidebar-inställningar
-# Välj vad som ska visas i sidopanelen
 show_sidebar: true
-
-sidebar:
-  - title: "Senaste inlägg"
-    links:
-      - title: "Senaste inlägg"
-        url: /blog/
-        description: "Se de senaste blogginläggen"
-
-# Om du vill visa kategorier
 show_categories: true
-
-# Om du vill visa taggar
 show_tags: true
