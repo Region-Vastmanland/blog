@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Min Blogg"
+  description: "Tankar och reflektioner"
+  site-url: "https://region-vastmanland.github.io/blog"
+  
+  navbar:
+    left:
+      - text: "Hem"
+        href: index.qmd
+      - text: "Blogg"
+        href: blog.qmd
+      - text: "Om"
+        href: about.qmd
+    
+  page-footer:
+    center: "© 2024 Min Blogg"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-tools: true
