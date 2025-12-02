@@ -1,18 +1,26 @@
-title: "Region Västmanland Blogg"
-description: "Officiell blogg för Region Västmanland"
-url: "https://region-vastmanland.github.io"
-baseurl: "/blog"
-show_posts: true
-theme: jekyll-theme-minimal
+title: Min Blogg
+description: Tankar och reflektioner
+author: Ditt Namn
+email: din@email.com
 
-paginate: 6
-paginate_path: "/page:num/"
+# GitHub Pages använder Jekyll automatiskt
+markdown: kramdown
+theme: minima
 
-# Sidebar-inställningar
-show_sidebar: true
-show_categories: true
-show_tags: true
+# URL-inställningar
+baseurl: "" # Om ditt repo heter username.github.io, lämna tom
+url: "https://region-vastmanland.github.io" # Byt ut detta
 
-collections:
-  posts:
-    output: true
+# Permalinks
+permalink: /:year/:month/:day/:title/
+
+# Plugins som GitHub Pages stödjer
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude från bygget
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
