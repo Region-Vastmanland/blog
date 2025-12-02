@@ -17,3 +17,7 @@ paginate_path: "/page:num/"
 show_sidebar: true
 show_categories: true
 show_tags: true
+
+collections:
+  posts:
+    output: true
