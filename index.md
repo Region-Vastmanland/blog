@@ -2,6 +2,7 @@
 layout: home
 title: "Region Västmanland Blogg"
 author_profile: false
+show_posts: true
 ---
 
 Välkommen till Region Västmanlands blogg.  
