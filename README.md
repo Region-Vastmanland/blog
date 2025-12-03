@@ -3,6 +3,7 @@ Så här lägger du till nya inlägg framöver:
 2.	Klicka Add file → Create new file
 3.	Skriv filnamn: 2025-12-04-mitt-nya-inlägg/index.qmd
 4.	Lägg till innehåll:
+
 yaml
 ---
 title: "Min titel"
@@ -12,10 +13,10 @@ categories: [kategori1, kategori2]
 description: "Kort beskrivning"
 ---
 
-Innehåll här
+##Innehåll här
 
 Skriv ditt blogginlägg...
-5.	Commit → GitHub bygger automatiskt → Live på några minuter! ✅
+5.	Commit → GitHub bygger automatiskt → Live på några minuter
 Tips för framtiden:
 •	Lägg till bilder: Släpp bildfiler i samma mapp som index.qmd, referera med ![](bild.jpg)
 •	Ändra tema: Redigera _quarto.yml och byt theme: cosmo till andra teman (flatly, darkly, etc.)
