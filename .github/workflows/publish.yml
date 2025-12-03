@@ -23,12 +23,6 @@ jobs:
         with:
           version: 1.4.549
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
       - name: Render Quarto Project
         run: quarto render
 
