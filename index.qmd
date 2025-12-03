@@ -1,5 +1,5 @@
 ---
-title: "Min Blogg"
+title: "Statistik om Västmanland"
 listing:
   contents: posts
   sort: "date desc"
@@ -8,11 +8,11 @@ listing:
   fields: [date, title, description]
 ---
  
-## Välkommen till min blogg! 👋
+## Välkommen till Statistik om Västmanland
 
-Här skriver jag om programmering, data science och andra tekniska ämnen som intresserar mig.
+Här skriver vi kortare texter om utvecklingen i länet. Det kan vara specifik data som är värd att lyfta fram och som av olika anledningar inte ryms i våra andra kanaler. Vi som skriver jobbar på den regionala utvecklingsförvaltningens Analysenhet.  
 
-### 📝 Senaste inläggen
+### Senaste inläggen
 
 <!-- Automatisk lista med de 3 senaste -->
 
@@ -20,13 +20,13 @@ Här skriver jag om programmering, data science och andra tekniska ämnen som in
 
 ---
 
-## 🎯 Vad jag skriver om
+## Vad vi skriver om
 
 - **Programmering**: Python, JavaScript, webbutveckling
 - **Data Science**: Analys, visualisering, machine learning
 - **Verktyg & Tips**: Produktivitet och arbetsflöden
 - **Reflektioner**: Tankar om teknik och lärande
 
-## 📬 Följ bloggen
+## Följ bloggen
 
 Nya inlägg publiceras varje vecka. Håll utkik efter uppdateringar!
