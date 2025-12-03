@@ -1,1 +1,16 @@
+---
+title: "Välkommen till min Quarto-blogg"
+author: "Ditt Namn"
+date: "2025-12-02"
+categories: [blogg, introduktion, quarto]
+description: "Mitt andra inlägg på den nya bloggen"
+---
 
+## Varför Quarto?
+
+Quarto är fantastiskt för tekniska bloggar eftersom det stödjer:
+
+- **Executable code** - Kör Python, R, Julia direkt i dokumenten
+- **Matematiska formler** med LaTeX
+- **Interaktive visualiseringar**
+- **Vacker styling** direkt ur lådan
