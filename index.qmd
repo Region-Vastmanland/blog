@@ -1,4 +1,4 @@
----
+ste ---
 title: "Statistik om Västmanland"
 listing:
   contents: posts
@@ -27,6 +27,5 @@ Här skriver vi kortare texter om utvecklingen i länet. Det kan vara specifik d
 - **Verktyg & Tips**: Produktivitet och arbetsflöden
 - **Reflektioner**: Tankar om teknik och lärande
 
-## Följ bloggen
+## Senaste inläggen
 
-Nya inlägg publiceras varje vecka. Håll utkik efter uppdateringar!
