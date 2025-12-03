@@ -1,19 +1,27 @@
 ---
-title: "Min Blogg"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: grid
-  categories: true
-  max-items: 6
-  fields: [date, title, author, categories, description, image]
-page-layout: full
+title: "Välkommen till min Quarto-blogg"
+author: "Ditt Namn"
+date: "2025-12-02"
+categories: [blogg, introduktion, quarto]
+description: "Mitt första inlägg på den nya bloggen"
 ---
 
-## Välkommen! 👋
+## Varför Quarto?
 
-Hej och välkommen till min blogg! Här delar jag med mig av mina tankar, lärdomar och upptäckter inom programmering, data science och teknik.
+Quarto är fantastiskt för tekniska bloggar eftersom det stödjer:
 
-### Senaste inläggen
+- **Executable code** - Kör Python, R, Julia direkt i dokumenten
+- **Matematiska formler** med LaTeX
+- **Interaktive visualiseringar**
+- **Vacker styling** direkt ur lådan
 
-<!-- Quarto visar automatiskt de 6 senaste inläggen här -->
+## Nästa steg
+
+I framtida inlägg kommer jag utforska:
+
+- Datavisualisering
+- Statistisk analys
+- Machine learning experiment
+- Och mycket mer!
+
+Tack för att du läser! 🚀
