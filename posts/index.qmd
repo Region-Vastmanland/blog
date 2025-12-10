@@ -1,0 +1,95 @@
+---
+title: "Arbetsinkomst"
+author: "Magnus Forslund"
+format: html
+editor: visual
+---
+
+## Så stor andel av arbetsinkomsten intjänas i Västerås
+
+Genom att titta på hur stor andel av den summerade arbetsinkomsten i länets DeSo som intjänas i Västerås får vi en bild av hur viktig Västerås är som motor på arbetsmarknaden i Västmanland och hur olika lokala mönster ser ut. Vi ser att andelarna är relativt lika inom länets enskilda kommuner men att det finns några avvikelser. Allra lägst andel finns i Norberg, där den högsta andelen för ett enskilt DeSO är 5,5 procent och övriga DeSo ligger under fem procent. Enkelt uttryckt så intjänas en mycket liten andel av arbetsinkomsten i Västerås bland personer som bor i Norbergs kommun. Även i den västra delen av Arboga komun är andelen relativt liten, under tre procent.
+
+Västerås tydliga påverkan sträcker sig i ett tydligt band runt den egna kommunen, från östra delen avv Köping, över Hallstahammar och Surahammar till de södra delarna av Sala kommun. Här ligger andelen som arbetar i Västerås mellan 20 och 50 procent.
+
+Inom själva Västerås ligger de flesta DeSO inom spannet 70-80 procent, vilket är en rimlig siffra då andelen pendlare ofta ligger runt 20 procent i en population. Om vi zoomar in i Västerås ser vi några undantag i båda riktningarna. Dels norrra Malmaberg och delar av östra Malmaberg, där andelen är strax över 80 procent. En gissning är att många här är bosatta i närhet till arbetsplatserna på Finnslätten, Centrallasarettet och Hälla. Vi ser också några områden i staden med lägre andel som intjänar sin arbetsinkomst i Västerås. Det är områdena kring Östra hamnen, Lillåudden, Östermalm och en av de första etapperna inom Öster Mälarstrand. Sannolikt finner vi här en stor del som pendlar till (främst) Stockholm utifrån närheten till tågstationen.
+
+**Kartan visar hur stor andel av den summerade arbetsinkomst i länets DeSO:n som intjänats i Västerås (arbetsplats i kommunen).**
+
+```{r, include=FALSE}
+
+library(leaflet)
+library(shiny)
+library(geojsonio)
+library(sf)
+library(readxl)
+library(dplyr)
+library(stringr)
+library(classInt)
+library(htmlwidgets)
+library(writexl)
+
+
+#DESO
+
+#Läs in grunddata
+deso18 <- st_read("Y:/Geodata/DeSO18Västmanland.gpkg")  #Geopackage för den geogarfi som ska användas, kommun eller deso
+
+deso_andel <- read_xlsx("Y:/Statistikunderlag/Arbetsinkomst/Deso23.xlsx")  #Excelfil med andelarna
+
+
+####################################################
+#SKAPA KARTA FRÅN DATA OVAN
+
+
+# Läs in geopackage
+#kommuner <- st_read("Y:/Geodata/KommungränserVästmanland.gpkg")
+
+#Slå ihop geopackage och data 
+karta <- left_join(deso18, deso_andel, by = c("deso" = "Deso"))
+
+#Ändra koordinatsystem för leaflet
+karta <- st_transform(karta, 4326)
+
+#Manuella gränser
+breaks_m <- c(0, 5, 10, 20, 50, 70, 80, 100)
+
+
+#sätt färgpalett + ändra data domain
+pal <- colorBin(
+  pal = "YlOrRd", # Eller t.ex. "YlOrRd", "Viridis", "Greens"
+  domain = karta$Andel_V,
+  bins = breaks_m,  
+  na.color = "transparent"
+)
+
+#Skapa leaflet
+my_map <- leaflet() %>%
+  addProviderTiles("CartoDB.Positron") %>%
+  addPolygons(
+    data = karta,
+    fillColor = ~pal(Andel_V),  #hämtar från kolumnen Andel_V
+    color = "black",
+    weight = 1,
+    fillOpacity = 0.4,
+    popup = ~paste(
+      "Deso område:", deso, "<br>",
+      "Kommun:", kommunnamn, "<br>",
+      "Andel av arbetsinkomst intjänad i Västerås:", Andel_V, "<br>" #Vad som ska finnas i popup-rutan
+    )
+  )%>%
+  #addControl(html = "<h3>Andel av arbetsinkomsten i respektive DeSO som intjänas i Västerås</h3>", position = "topright")%>%
+  addLegend(
+    pal = pal,
+    values = karta$Andel_V,
+    title = "Andel år 2023",
+    position = "bottomright", 
+    labFormat = labelFormat(big.mark = " ", between = " - ")
+  )
+
+```
+
+```{r, echo=FALSE}
+
+my_map
+
+```
