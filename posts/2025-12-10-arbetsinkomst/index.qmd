@@ -3,6 +3,10 @@ title: "Arbetsinkomst"
 author: "Magnus Forslund"
 format: html
 editor: visual
+date: "2025-12-10"
+categories: [arbetsmarknad, pendling]
+description: "Så stor del av arbetsinkomsten intjänas i Västerås"
+
 ---
 
 ## Så stor andel av arbetsinkomsten intjänas i Västerås
@@ -93,3 +97,4 @@ my_map <- leaflet() %>%
 my_map
 
 ```
+
